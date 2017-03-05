@@ -1,4 +1,4 @@
-FROM docker:latest
+FROM docker:git
 
 
 # Install docker-compose
