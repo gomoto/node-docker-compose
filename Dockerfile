@@ -9,6 +9,8 @@ RUN apt-get -y --fix-missing update \
     ca-certificates \
     curl \
     openssl \
+    python-setuptools \
+    python-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
@@ -32,9 +34,7 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 
 # Install docker-compose
 
-RUN wget https://bootstrap.pypa.io/get-pip.py \
-  && python get-pip.py \
-  && pip install docker-compose
+RUN easy_install pip && pip install docker-compose
 
 
 # Set node as default command
