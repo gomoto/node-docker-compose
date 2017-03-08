@@ -9,6 +9,7 @@ RUN apt-get -y --fix-missing update \
     ca-certificates \
     curl \
     openssl \
+    python-pip \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
