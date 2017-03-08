@@ -8,7 +8,7 @@ RUN apt-get -y --fix-missing update \
   && apt-get -y install \
     ca-certificates \
     curl \
-    openssl
+    openssl \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
